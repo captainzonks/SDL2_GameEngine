@@ -1,5 +1,7 @@
+SHELL = bash.exe
+ 
 build:
-	g++ -w -std=c++14 -Wfatal-errors -m32 -static-libstdc++ \
+	g++ -w -std=c++14 -Wfatal-errors -m32  -static-libstdc++ \
 	./src/*.cpp \
 	-o game.exe \
 	-IC:\SDL\SDL2\include \

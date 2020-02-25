@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+project(GameEngine)
+
 file(GLOB ROOT_SOURCE *.cpp)
 file(GLOB ROOT_INLINE *.inl)
 file(GLOB ROOT_HEADER *.hpp)
