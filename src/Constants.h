@@ -4,7 +4,9 @@
 const unsigned int WINDOW_WIDTH{ 800 };
 const unsigned int WINDOW_HEIGHT{ 600 };
 
-const unsigned int FPS{ 60 };
+// set fps for monitor refresh rate
+// consider making this variable
+const unsigned int FPS{ 144 };
 const unsigned int FRAME_TARGET_TIME{ 1000 / FPS };
 
 enum LayerType

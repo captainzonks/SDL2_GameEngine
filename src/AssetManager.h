@@ -14,7 +14,7 @@ private:
 	std::map<std::string, SDL_Texture*> textures;
 public:
 	AssetManager(EntityManager* manager);
-	~AssetManager();
+	~AssetManager() {}
 	void ClearData();
 	void AddTexture(std::string textureId, const char* filePath);
 	SDL_Texture* GetTexture(std::string textureId);
