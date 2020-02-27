@@ -10,6 +10,8 @@
 class KeyboardControlComponent
 	: public Component
 {
+private:
+	int debugIndex{};
 public:
 	std::string upKey;
 	std::string downKey;
@@ -24,7 +26,7 @@ public:
 
 	}
 
-	KeyboardControlComponent(std::string upKey, std::string rightKey, std::string downKey, std::string leftKey, std::string shootKey)
+	KeyboardControlComponent(std::string upKey, std::string rightKey, std::string downKey, std::string leftKey, std::string shootKey, std::string tabKey)
 	{
 		this->upKey = GetSDLKeyStringCode(upKey);
 		this->rightKey = GetSDLKeyStringCode(rightKey);
@@ -107,5 +109,7 @@ public:
 		}
 	}
 };
+
+
 
 #endif // !KEYBOARDCONTROLCOMPONENT_H

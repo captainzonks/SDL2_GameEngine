@@ -20,6 +20,7 @@ public:
 	~Game();
 	int ticksLastFrame{ 0 };
 	bool IsRunning() const;
+	static bool isDebug;
 	static SDL_Renderer* renderer;
 	static AssetManager* assetManager;
 	static SDL_Event event;
@@ -31,6 +32,9 @@ public:
 	void Render();
 	void Destroy();
 	void HandleCameraMovement();
+	void CheckCollisions();
+	void ProcessNextLevel(int levelNumber);
+	void ProcessGameOver();
 };
 
 #endif // !GAME_H

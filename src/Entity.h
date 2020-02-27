@@ -42,25 +42,15 @@ public:
 	}
 
 	template <typename T>
-	T* GetComponent()
+	bool HasComponent() const
 	{
-		return static_cast<T*>(componentTypeMap[&typeid(T)]);
+		return componentTypeMap.count(&typeid(T));
 	}
 
 	template <typename T>
-	bool HasComponent() const
+	T* GetComponent()
 	{
-		auto search = componentTypeMap.find(&typeid(T));
-		if (search != componentTypeMap.end())
-		{
-			std::cout << "True" << std::endl; // debug output
-			return true;
-		}
-		else
-		{
-			std::cout << "False" << std::endl; // debug output
-			return false;
-		}
+		return static_cast<T*>(componentTypeMap[&typeid(T)]);
 	}
 };
 
