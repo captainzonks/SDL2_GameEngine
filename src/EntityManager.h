@@ -15,10 +15,13 @@ public:
 	void Update(float deltaTime);
 	void Render();
 	bool HasNoEntities() const;
-	Entity& AddEntity(std::string entityName);
-	std::vector<Entity*> GetEntities() const;
 	unsigned int GetEntityCount();
 	void ListAllEntities() const;
+	std::vector<Entity*> GetEntities() const;
+	std::vector<Entity*> GetEntitiesByLayer(LayerType layer) const;
+	Entity& AddEntity(std::string entityName, LayerType layer);
+
+
 };
 
 #endif // !ENTITYMANAGER_H
