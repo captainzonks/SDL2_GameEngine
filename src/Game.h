@@ -20,7 +20,6 @@ public:
 	~Game();
 	int ticksLastFrame{ 0 };
 	bool IsRunning() const;
-	static bool isDebug;
 	static SDL_Renderer* renderer;
 	static AssetManager* assetManager;
 	static SDL_Event event;

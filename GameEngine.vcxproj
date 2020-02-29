@@ -152,6 +152,8 @@
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Map.cpp" />
+    <ClCompile Include="src\QuadTree\Boundary.cpp" />
+    <ClCompile Include="src\QuadTree\QuadTree.cpp" />
     <ClCompile Include="src\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +171,8 @@
     <ClInclude Include="src\EntityManager.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Map.h" />
+    <ClInclude Include="src\QuadTree\Boundary.h" />
+    <ClInclude Include="src\QuadTree\QuadTree.h" />
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

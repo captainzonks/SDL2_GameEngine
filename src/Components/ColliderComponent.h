@@ -24,7 +24,7 @@ public:
 	{
 		this->colliderTag = colliderTag;
 		this->collider = { x, y, width, height };
-		SetTexture("collision-texture");
+		/*SetTexture("collision-texture");*/
 	}
 
 	void Initialize() override
@@ -37,10 +37,10 @@ public:
 		}
 	}
 
-	void SetTexture(std::string assetTextureId)
-	{
-		colliderTexture = Game::assetManager->GetTexture(assetTextureId);
-	}
+	//void SetTexture(std::string assetTextureId)
+	//{
+	//	colliderTexture = Game::assetManager->GetTexture(assetTextureId);
+	//}
 
 	void Update(float deltaTime) override
 	{
@@ -52,13 +52,13 @@ public:
 		destinationRectangle.y = collider.y - Game::camera.y;
 	}
 
-	void Render() override
-	{
-		if (Game::isDebug)
-		{
-			TextureManager::Draw(colliderTexture, sourceRectangle, destinationRectangle, spriteFlip);
-		}
-	}
+	//void Render() override
+	//{
+	//	if (Game::isDebug)
+	//	{
+	//		TextureManager::Draw(colliderTexture, sourceRectangle, destinationRectangle, spriteFlip);
+	//	}
+	//}
 
 };
 

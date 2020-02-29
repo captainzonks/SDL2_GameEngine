@@ -22,6 +22,7 @@ private:
 public:
 	std::string name;
 	LayerType layer;
+	Entity();
 	Entity(EntityManager& manager);
 	Entity(EntityManager& manager, std::string name, LayerType layer);
 	void Update(float deltaTime);
@@ -31,7 +32,7 @@ public:
 	void ListAllComponents() const;
 
 	template <typename T, typename... TArgs>
-	T& AddComponent(TArgs&&... args)
+	T& AddComponent(TArgs&&... args) 
 	{
 		T* newComponent(new T(std::forward<TArgs>(args)...));
 		newComponent->owner = this;

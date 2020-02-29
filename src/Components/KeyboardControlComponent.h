@@ -26,7 +26,7 @@ public:
 
 	}
 
-	KeyboardControlComponent(std::string upKey, std::string rightKey, std::string downKey, std::string leftKey, std::string shootKey, std::string tabKey)
+	KeyboardControlComponent(std::string upKey, std::string rightKey, std::string downKey, std::string leftKey, std::string shootKey)
 	{
 		this->upKey = GetSDLKeyStringCode(upKey);
 		this->rightKey = GetSDLKeyStringCode(rightKey);
