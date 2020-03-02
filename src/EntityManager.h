@@ -20,7 +20,6 @@ public:
 	std::vector<Entity*> GetEntitiesByLayer(LayerType layer) const;
 	Entity& AddEntity(std::string entityName, LayerType layer);
 	CollisionType CheckCollisions() const;
-	void DestroyInactiveEntities();
 
 };
 

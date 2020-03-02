@@ -18,20 +18,15 @@ bool EntityManager::HasNoEntities() const
 
 void EntityManager::Update(float deltaTime)
 {
-	for (auto& entity : entities)
-	{
-		entity->Update(deltaTime);
-	}
-	DestroyInactiveEntities();
-}
-
-void EntityManager::DestroyInactiveEntities()
-{
 	for (int i{}; i < entities.size(); i++)
 	{
 		if (!entities[i]->IsActive())
 		{
 			entities.erase(entities.begin() + i);
+		}
+		else
+		{
+			entities[i]->Update(deltaTime);
 		}
 	}
 }
