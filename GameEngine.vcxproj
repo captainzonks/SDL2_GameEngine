@@ -162,6 +162,7 @@
     <ClInclude Include="src\Component.h" />
     <ClInclude Include="src\Components\ColliderComponent.h" />
     <ClInclude Include="src\Components\KeyboardControlComponent.h" />
+    <ClInclude Include="src\Components\ProjectileEmitterComponent.h" />
     <ClInclude Include="src\Components\SpriteComponent.h" />
     <ClInclude Include="src\Components\TextLabelComponent.h" />
     <ClInclude Include="src\Components\TileComponent.h" />

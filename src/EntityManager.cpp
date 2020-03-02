@@ -22,6 +22,18 @@ void EntityManager::Update(float deltaTime)
 	{
 		entity->Update(deltaTime);
 	}
+	DestroyInactiveEntities();
+}
+
+void EntityManager::DestroyInactiveEntities()
+{
+	for (int i{}; i < entities.size(); i++)
+	{
+		if (!entities[i]->IsActive())
+		{
+			entities.erase(entities.begin() + i);
+		}
+	}
 }
 
 void EntityManager::Render()
